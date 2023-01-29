@@ -1,0 +1,442 @@
+<!DOCTYPE html lang="eng">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="bymichaelmarshall" content="Design & Writing by Michael Marshall">
+    <meta name="canada,user experience,ux,user interface,ui,publishing,media,portfolio,contractor,design,writing,music,writer,designer,musician,typesetting,web design,michael,marshall,michael marshall" content="HTML, CSS, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google/Android Favicon Meta-->
+    <meta name="theme-color" content="#212121">
+    <!--Standard Favicon-->
+    <link rel="icon" href="favicon/bymmfavicon.png" type="image/svg+xml">
+     <!--iOS Favicons-->
+     <link rel="apple-touch-icon" href="favicon/iOS-touch-icon.png">
+     <!--Google/Android Favicon-->
+     <link rel="manifest" href="manifest.json">
+    <title>Case Study | Design By MM</title>
+    <!--Styles-->
+    <link rel="stylesheet" href="styles.css">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
+    <style>
+        .gridHeader-sideNav {
+                font-weight: 900;
+                max-width: 280px;
+                width: 100%;
+                margin-top: 0.67em;
+                padding: 0em 3em 0em 3em;
+            }
+        /*Full-width Row Background*/
+        html, .uxCaseblock {
+            overflow-x: hidden;
+        }
+
+        .uxCaseBlock {
+            position: relative; /* for child pseudo-element */
+            margin: 0 -600rem;
+            z-index: 1;
+            /* add back negative margin value */
+            padding: 0.25rem 600rem;
+            background: #2c2c2c;
+        }
+
+        .uxCaseBlock p:last-child {
+            margin-block-end: 1.8em;
+        }
+
+        html, .uxCaseBlock-extended {
+            overflow-x: hidden;
+        }
+
+        .uxCaseBlock-extended {
+            position: relative; /* for child pseudo-element */
+            margin: 0 -600rem;
+            z-index: 1;
+            /* add back negative margin value */
+            padding: 0.25rem 600rem;
+            background: #2c2c2c;
+        }
+
+        .desktopViewbox {
+                max-height: 337.50;
+                max-width: 600;
+                overflow: auto;
+                margin: 1.8em 0em 1.8em 0em;
+            }
+
+        .desktopWireframe {
+                max-width: 100%;
+            }
+
+        .mobileViewbox {
+                margin: 0em auto 0em auto;
+                max-height: 676;
+                max-width: 370;
+                overflow: auto;
+            }
+
+        .mobileWireframe {
+                max-width: 100%;
+            }
+
+        /*/Full-width Row Background Close*/
+        @media only screen and (min-width:760px) {
+            .gridHeader-sideNav {
+                    padding: 3em 10% 0em 10%;
+                }
+        }
+        @media only screen and (min-width:1020px) {
+            .uxCaseblock-extended {
+                margin: 0rem;
+                z-index: 1;
+            /* add back negative margin value */
+                padding: 0rem;
+                background: transparent;
+                }
+            
+            .mobileViewbox {
+                    margin: 4em auto 1.8em 1em;
+                    max-width: 320;
+                }
+        }
+        @media only screen and (min-width:1110px) {
+            .sideNavSticky {
+                position: sticky;
+                top: 5px;
+                z-index: 3;
+            }
+
+            .gridHeader-sideNav {
+                padding: 3em 3em 0em 3em;
+                width: 16vw;
+            }
+        }
+
+        /*Selective Hover State for SVG*/
+            .uxTemple {
+                display: block;
+                margin: 0em auto 1.6em auto;
+            }
+
+            .uxTemple-foundations {
+                fill: rgb(1,1,1);
+                filter: invert(6%) sepia(70%) saturate(7456%) hue-rotate(329deg) brightness(100%) contrast(128%);
+            }
+
+            #foundationsTag {
+                color: rgb(1,1,1);
+                filter: invert(6%) sepia(70%) saturate(7456%) hue-rotate(329deg) brightness(100%) contrast(128%);
+            }
+
+            .uxTemple-pillars {
+                fill: rgb(1,1,1);
+                filter: invert(80%) sepia(44%) saturate(354%) hue-rotate(9deg) brightness(90%) contrast(87%);
+            }
+
+            #pillarsTag {
+                color: rgb(1,1,1);
+                filter: invert(80%) sepia(44%) saturate(354%) hue-rotate(9deg) brightness(90%) contrast(87%);
+            }
+
+            .uxTemple-ornaments {
+                fill: rgb(1,1,1);
+                filter: invert(99%) sepia(2%) saturate(3746%) hue-rotate(115deg) brightness(91%) contrast(92%);
+            }
+
+            #ornamentsTag {
+                color: rgb(1,1,1);
+                filter: invert(99%) sepia(2%) saturate(3746%) hue-rotate(115deg) brightness(91%) contrast(92%);
+            }
+
+            @media only screen and (min-width: 1020px) {
+                .uxTemple-foundations {
+                    filter: brightness(1000);
+                }
+
+                svg:hover .uxTemple-foundations {
+                    filter: invert(6%) sepia(70%) saturate(7456%) hue-rotate(329deg) brightness(100%) contrast(128%);
+                }
+
+                #foundationsTag {
+                    filter: brightness(1000);
+                }
+
+                .uxTemple:hover ~ p #foundationsTag {
+                    color: rgb(1,1,1);
+                    filter: invert(6%) sepia(70%) saturate(7456%) hue-rotate(329deg) brightness(100%) contrast(128%);
+                }
+
+                .uxTemple-pillars {
+                    filter: brightness(1000);
+                }
+
+                svg:hover .uxTemple-pillars {
+                    filter: invert(80%) sepia(44%) saturate(354%) hue-rotate(9deg) brightness(90%) contrast(87%);
+                }
+
+                #pillarsTag {
+                    filter: brightness(1000);
+                }
+
+                .uxTemple:hover ~ p #pillarsTag {
+                    color: rgb(1,1,1);
+                    filter: invert(80%) sepia(44%) saturate(354%) hue-rotate(9deg) brightness(90%) contrast(87%);
+                }
+
+                .uxTemple-ornaments {
+                    filter: brightness(1000);
+                }
+
+                svg:hover .uxTemple-ornaments{
+                    filter: invert(99%) sepia(2%) saturate(3746%) hue-rotate(115deg) brightness(91%) contrast(92%);
+                }
+                
+                #ornamentsTag {
+                    filter: brightness(1000);
+                }
+
+                .uxTemple:hover ~ p #ornamentsTag {
+                    color: rgb(1,1,1);
+                    filter: invert(99%) sepia(2%) saturate(3746%) hue-rotate(115deg) brightness(91%) contrast(92%);
+                }
+            }
+
+           
+        /*/ Close Selective Hover State for SVG*/
+    </style>
+</head>
+<body id="body">
+    <div class="navBar">
+        <header>
+        <a href="https://www.bymichaelmarshall.com/">
+            <div class="homeIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17.195" height="16.25" viewBox="0 0 17.195 16.25"><path class="homeIconSVGPath" d="M14.207-2338.121H4.245a1.519,1.519,0,0,1-1.519-1.519v-4.762a1.52,1.52,0,0,1-1.652-.331,1.519,1.519,0,0,1,0-2.148l7.044-7.044a1.515,1.515,0,0,1,1.108-.444,1.515,1.515,0,0,1,1.108.444l7.044,7.044a1.519,1.519,0,0,1,0,2.148,1.52,1.52,0,0,1-1.652.331v4.762a1.519,1.519,0,0,1-1.519,1.519Zm-4.98-12.615h0Z" transform="translate(-0.629 2354.371)"/></svg>
+            </div>
+        </a>
+        </header>
+        <!-- Nav -->
+        <nav>
+            <div class="navWrapper">
+                <div class="nav">
+                <input id="checkbox" type="checkbox"/>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="menu">
+                        <li><a href="about">About</a></li> 
+                        <li><a href="contact">Contact</a></li>
+                        <li class="textMenuCurrentPage">Case Study &larr;</li>
+                    </div>
+                </div>
+            </div>
+            <div class="text-navWrapper">
+                <div class="text-nav">
+                    <div class="textMenu">
+                        <li><a href="about">About</a></li>
+                        <li><a href="contact">Contact</a></li>
+                        <li class="textMenuCurrentPage">Case Study</li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+<!--Body Content-->
+<div id="bodyContent">
+    <div class="gridContainer">
+        <div class="gridHeader sideNavSticky">
+            <div class="gridHeader-sideNav">
+                <p style="margin-top: 0em;"><a class="designLink" href="#">1. Goal</a></p>
+                <p><a class="designLink" href="#2pr">2. Product Requirements</a></p>
+                <p><a class="designLink" href="#3wire">3. Wireframes</a></p>
+                <p><a class="designLink" href="#4mocks">4. Mocks</a></p>
+                <p><a class="designLink" href="#5qa">5. Design QA & UAT</a></p>
+                <p><a class="designLink" href="#6insight">6. Insights & Review</a></p>
+            </div>
+        </div>
+        <div class="gridBody">
+            <h1 id="1goal">1. What are we trying to achieve and why?</h1>
+            <h2>Questions, questions</h2>
+            <p>Products can often get bogged down in what could be. I like to start with why.</p>
+        
+            <p><b>What is your organization trying to achieve?</b> A business justification is as essential to product design as it is to your organisation; how will this product reduce costs, generate revenue, make your organisation more efficient, improve your staff’s quality of life, and/or uphold your organisation’s ethos?</p>
+            <p><b>Who is this for?</b> Your users, audience members, beneficiaries, customers, clients, donors, listeners, and readers all have something they’re trying to do. How will this product make their endeavour easier and more successful?</p>
+            <p>Build for your users’ goals, build for your organization’s goals, and you have a valuable long-lasting product.</p>
+        </div>
+        <div class="gridMargin"></div>
+        <div class="gridHeader"></div>
+        <div class="gridBody">
+            <div class="uxCaseBlock">
+                <h2>UX Case:</h2>
+                <p><i>Maclean’s</i> is one of Canada’s largest news publications. The <i>Maclean’s</i> team aims to keep Canada informed through rigorous journalism. In this case, we’re trying to convert more readers of <i>Maclean’s</i> online content into newsletter subscribers. Newsletter subscribers are valuable for brand awareness, engagement, marketing, and advertising revenue. Newsletters let users engage directly with the journalism that interests them and keep them up to date with current commentary and events.</p>
+            </div>
+        </div>
+        <div class="gridMargin"></div>
+        <div class="gridHeader">
+        </div>
+        <div class="gridBody">
+            <h1 id="2pr">2. What do we need to achieve this?</h1>
+            <svg class="uxTemple" xmlns="http://www.w3.org/2000/svg" width="111.941" height="126.941" viewBox="0 0 111.941 126.941">
+                <g transform="translate(-904.03 -1190.059)">
+                    <g class="uxTemple-pillars" transform="translate(921 1255)">
+                        <rect width="42" height="6" rx="3" transform="translate(6) rotate(90)"/>
+                        <rect width="42" height="6" rx="3" transform="translate(24) rotate(90)"/>
+                        <rect width="42" height="6" rx="3" transform="translate(60) rotate(90)"/>
+                        <rect width="42" height="6" rx="3" transform="translate(42) rotate(90)"/>
+                        <rect width="42" height="6" rx="3" transform="translate(78) rotate(90)"/>
+                    </g>
+                    <g class="uxTemple-foundations" transform="translate(915 1301)">
+                        <rect width="42" height="6" rx="3" transform="translate(48 6) rotate(180)"/>
+                        <rect width="42" height="6" rx="3" transform="translate(42 16) rotate(180)"/>
+                        <rect width="42" height="6" rx="3" transform="translate(84 6) rotate(180)"/>
+                        <rect width="42" height="6" rx="3" transform="translate(90 16) rotate(180)"/>
+                    </g>
+                    <g class="uxTemple-ornaments" transform="translate(904.03 1190.059)">
+                        <rect width="42" height="6" rx="3" transform="translate(33.941 30.243) rotate(135)"/>
+                        <rect width="42" height="6" rx="3" transform="translate(85.941 30.243) rotate(135)"/>
+                        <rect width="42" height="6" rx="3" transform="translate(59.941 4.243) rotate(135)"/>
+                        <rect width="42" height="6" rx="3" transform="translate(55.698 59.941) rotate(-135)"/>
+                        <rect width="42" height="6" rx="3" transform="translate(107.698 59.941) rotate(-135)"/>
+                        <rect width="42" height="6" rx="3" transform="translate(81.698 33.941) rotate(-135)"/>
+                        <rect width="42" height="6" rx="3" transform="translate(94.97 60.941) rotate(180)"/>
+                        <rect width="42" height="6" rx="3" transform="translate(58.97 60.941) rotate(180)"/>
+                    </g>
+                </g>
+            </svg>
+            <p><span id="foundationsTag"><b>Foundations:</b></span> content, design, and development.<br>
+            <b><span id="pillarsTag">Pillars:</b></span> technology, user experience (UX), and the product’s inherent value.<br>
+            <b><span id="ornamentsTag">Ornamentation:</b></span> aesthetics, branding, and peripheral features.</p>
+            <p><b>Key Benchmarks</b> Key Benchmarks: exceed the standard of product quality and functionality, build for versatility and ease of revision, and reduce technical debt, complexity, and maintenance costs.</p>
+        </div>
+        <div class="gridMargin"></div>
+        <div class="gridHeader"></div>
+        <div class="gridBody">
+            <div class="uxCaseBlock">
+                <h2>UX Case:</h2>
+                <p><i>Maclean’s</i> has a site, a Content Management System (CMS), and a newsletter platform. The newsletter signup page needs copy and images that communicate the value of <i>Maclean’s</i> newsletters to a reader, technology that collects and protects their information and preferences, and UX that makes signing up quick, easy, informative and accessible to all.</p>
+            </div>
+        </div>
+        <div class="gridMargin"></div>
+        <div class="gridHeader"></div>
+        <div class="gridBody">
+            <h1 id="3wire">3. How should it work?</h1>
+            <p>Whether you have your own UI designers, UX researchers, and insights or you need a hand, I’ll work with whatever we have to ensure each function and component is accounted for in the user flow and is implemented to its greatest effect.</p>
+        </div>
+        <div class="gridMargin"></div>
+        <div class="gridHeader"></div>
+        <div class="gridBody">
+            <div class="uxCaseBlock">
+                <h2>UX Case:</h2>
+                <p><i>Maclean’s</i> has a lot of insights about its readership. The signup page needs structure to showcase what <i>Maclean’s</i> can offer to an audience that wants the facts and to make informed choices efficiently.</p>
+                <div class="desktopViewbox">    
+                    <img src="assets/wireframeMacDesktop.jpg" class="desktopWireframe"/>
+                </div>
+                <p>The form is the most important component and should be immediately obvious and accessible to the reader; there’s no need to persuade a reader who has already come to the page with the intent to sign up. For the unconverted, a value statement is most important with support from endorsements and high value samples of content. For the still hesitant reader, an FAQ section works in tandem with the form at the base of the page to provide transparency and address privacy concerns without obstructing a committed reader with them. 
+                </p>
+                <p>The visual hierarchy is clear and concise and each structural element is positioned to flow into the next, encouraging the user to move between them. The remaining ‘whitespace’ reduces visual clutter and select areas are available for assets and branding.</p>
+            </div>
+        </div>
+        <div class="gridMargin">
+            <div class="uxCaseBlock-extended">
+                <div class="mobileViewbox">    
+                    <img src="assets/wireframeMacMobile.jpg" class="mobileWireframe"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="gridHeader"></div>
+        <div class="gridBody">
+            <h1 id="4mocks">4. What should it look like?</h1>
+            <p>The page should have an attractive, easy to navigate layout that gives users feedback and gets them from A to B while building trust by embodying your brand identity.</p> 
+            <p>UI mocks are more than just a blueprint - they’re typically interactive and contain essential information for your developer(s) on how the product should behave. More than just aesthetics, this ensures functionality, accessibility, and legal compliance from the start of your product’s life.</p>
+        </div>
+        <div class="gridMargin"></div>
+        <div class="gridHeader"></div>
+        <div class="gridBody">
+            <div class="uxCaseBlock">
+                <h2>UX Case:</h2>
+                <p>With the wireframe structure in place the mocks are intended to provide a much higher fidelity representation of what <i>Maclean’s</i> newsletter signup page will look like.</p>
+                <div class="desktopViewbox">    
+                    <img src="assets/mockMacDesktop.jpg" class="desktopWireframe"/>
+                </div>
+                <p>The mock includes all the basic design ingredients, i.e. assets, copy, brand colours, and brand typography. It also emphasizes the wireframe’s structure with strong visual hierarchy, neutral backgrounds, and contrast between elements. Extraneous cognitive load is reduced by simplifying graphic elements and making intentional use of colour that draws the reader to the most important aspects of the page. Elements, such as the ‘Newsletter Content’ articles, also match styles seen elsewhere on Maclean’s site making use of the reader’s familiarity with the brand; this capitalizes on the trust that is already associated with Maclean’s brand identity.</p>
+                <p>Among other technical information, the mocks also account for legal text and requirements, anti-spam measures, and accessibility standards; take for example, the mock’s colours and the signup form fields. The mock contains colour codes that have verified contrast ratios so that any text on the page is legible to partially sighted individuals. The signup form only asks for essential information which reduces Maclean’s legal liability in the event of a data leak or the workload in the event of a privacy request.</p>
+            </div>
+        </div>
+        <div class="gridMargin">
+            <div class="uxCaseBlock-extended">
+                <div class="mobileViewbox">    
+                    <img src="assets/mockMacMobile.jpg" class="mobileWireframe"/>
+                </div>
+            </div>
+        </div>
+        <div class="gridHeader"></div>
+        <div class="gridBody">
+            <h1 id="5qa">5. Does it work? Does it look good?</h1>
+            <p>Depending on your project, design quality assurance (QA) can happen at several different stages. In a typical workflow I like to review most products when mocks are first completed, before it goes to development, and again before the product goes live. This ensures that user acceptance testing (UAT) is focused <b>on the user</b> and no time is wasted.</p>
+            <p>Simply put, QA is essential and ensures that the product works as designed.</p>
+        </div>
+        <div class="gridMargin"></div>
+        <div class="gridHeader"></div>
+        <div class="gridBody">
+            <div class="uxCaseBlock">
+                <h2>UX Case:</h2>
+                <p>The newsletter page is accessible, collects no more and no less information than is needed, and lets readers reach their goal with minimal friction and complexity. By using pre-existing technology in the CMS and the newsletter platform overhead costs and tech debt are  unchanged. The page matches the branding and design requirements seen in the mocks on desktop, tablet, and mobile devices.</p>
+                <p>Over the following weeks at <i>Maclean’s</i> a substantial improvement in reader signups from multiple points across the site can be seen, meeting the original goal.</p>
+            </div>
+        </div>
+        <div class="gridMargin"></div>
+        <div class="gridHeader"></div>
+        <div class="gridBody">
+            <h1 id="6insight">6. What did we learn?</h1>
+            <p>As a team, our UX research and implementation was successful. The project met the original goal but what were our blindspots? Where are there opportunities for the product to grow?</p>
+        </div>
+        <div class="gridMargin"></div>
+        <div class="gridHeader"></div>
+        <div class="gridBody">
+            <div class="uxCaseBlock">
+                <h2>UX Case:</h2>
+                <p><b><i>From data to analytics to insights, Maclean’s web team discovers:</i></b></p>
+                <p>The signup form at the bottom of the page is getting more conversions than the one at the top. Analytics provides the insight that this is because the value and trust statements within the page are successful. Is there a way these statements can be communicated to readers elsewhere on the site and garner more signups on the initial form?</p>
+                <p>Due to the volume of site visitors the reCAPTCHA anti-spam measure in the signup form is glitching for some readers, as reCAPTCHA is a third-party service it’s a difficult error to address. It isn’t a great user experience and one of our UAT testers has pointed out that reCAPTCHA isn’t as accessibility friendly as it could be. Is there another anti-spam system, such as the honeypot method, that would work better?</p>
+            </div>
+        </div>
+        <div class="gridMargin"></div>
+        <div class="gridHeader"></div>
+        <div class="gridBody">
+                <hr class="divider" style="width=100%">
+                <p><i>I’ve touched lightly on the subject of signup forms here; to chat more about the unique UX complexities of digital forms, <a class="bodyLink" href="contact">get in touch →</a></i></p>
+            </div>
+        </div>
+        <div class="gridMargin"></div>
+        <div class="gridHeader"></div>
+        <div class="gridBody">
+            <a href="#">
+                <svg class="btt-btn" xmlns="http://www.w3.org/2000/svg" width="52" height="56.784" viewBox="0 0 84 91.728" preserveAspectRatio="none">
+                    <path class="bttSVGpath" d="M30.95-2334.494l-12.293-12.292L6.364-2334.494a3,3,0,0,1-4.243,0,3,3,0,0,1,0-4.243l14.143-14.143a2.994,2.994,0,0,1,2.393-.866,3,3,0,0,1,2.393.866l14.143,14.143a3,3,0,0,1,0,4.243,2.991,2.991,0,0,1-2.122.879A2.989,2.989,0,0,1,30.95-2334.494Z" transform="translate(23.343 2353.757)"/>
+                    <rect class="bttSVGrect1" width="28" height="6" rx="3" transform="translate(45 17.728) rotate(90)"/>
+                    <rect class="bttSVGrect2" width="42" height="6" rx="3" transform="translate(63 81.728) rotate(180)"/>
+                    <rect class="bttSVGrect2" width="84" height="6" rx="3" transform="translate(84 91.728) rotate(180)"/>
+                </svg>
+            </a>
+        </div>
+        <div class="gridMargin"></div>
+    </div>
+</div>
+<!--/Body Content-->
+    <footer class="footer">
+        <a href="https://bymichaelmarshall.com/terms">
+            <p class="admintext">©<span id="currentYear">2021</span>
+            </p>
+        </a>
+        <div class="icons">
+            <a href="contact">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
+            </a>
+        </div>
+    </footer> 
+</body>
+<!--JS-->
+<script src="script.js"></script>
+</html>

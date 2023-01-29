@@ -1,0 +1,299 @@
+<!DOCTYPE html lang="eng">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="bymichaelmarshall" content="Design & Writing by Michael Marshall">
+    <meta name="canada,user experience,ux,user interface,ui,publishing,media,portfolio,contractor,design,writing,music,writer,designer,musician,typesetting,web design,michael,marshall,michael marshall" content="HTML, CSS, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google/Android Favicon Meta-->
+    <meta name="theme-color" content="#212121">
+    <!--Standard Favicon-->
+    <link rel="icon" href="favicon/bymmfavicon.png" type="image/svg+xml">
+     <!--iOS Favicons-->
+     <link rel="apple-touch-icon" href="favicon/iOS-touch-icon.png">
+     <!--Google/Android Favicon-->
+     <link rel="manifest" href="manifest.json">
+    <title>Contact | Design By MM</title>
+    <!--Styles-->
+    <link rel="stylesheet" href="styles.css">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
+    <style>
+        .gridHeader-sideNav {
+                font-weight: 900;
+                max-width: 280px;
+                width: 100%;
+                margin-top: 0.67em;
+                padding: 0em 3em 0em 3em;
+            }
+        /*Full-width Row Background*/
+        html, .uxCaseblock {
+            overflow-x: hidden;
+        }
+
+        .uxCaseBlock {
+            position: relative; /* for child pseudo-element */
+            margin: 0 -600rem;
+            z-index: 1;
+            /* add back negative margin value */
+            padding: 0.25rem 600rem;
+            background: #2c2c2c;
+        }
+
+        .uxCaseBlock p:last-child {
+            margin-block-end: 1.8em;
+        }
+
+        html, .uxCaseBlock-extended {
+            overflow-x: hidden;
+        }
+
+        .uxCaseBlock-extended {
+            position: relative; /* for child pseudo-element */
+            margin: 0 -600rem;
+            z-index: 1;
+            /* add back negative margin value */
+            padding: 0.25rem 600rem;
+            background: #2c2c2c;
+        }
+
+        .desktopViewbox {
+                max-height: 337.50;
+                max-width: 600;
+                overflow: auto;
+                margin: 1.8em 0em 1.8em 0em;
+            }
+
+        .desktopWireframe {
+                max-width: 100%;
+            }
+
+        .mobileViewbox {
+                margin: 0em auto 0em auto;
+                max-height: 676;
+                max-width: 370;
+                overflow: auto;
+            }
+
+        .mobileWireframe {
+                max-width: 100%;
+            }
+
+        /*/Full-width Row Background Close*/
+        @media only screen and (min-width:760px) {
+            .gridHeader-sideNav {
+                    padding: 3em 10% 0em 10%;
+                }
+        }
+        @media only screen and (min-width:1020px) {
+            .uxCaseblock-extended {
+                margin: 0rem;
+                z-index: 1;
+            /* add back negative margin value */
+                padding: 0rem;
+                background: transparent;
+                }
+            
+            .mobileViewbox {
+                    margin: 4em auto 1.8em 1em;
+                    max-width: 320;
+                }
+        }
+        @media only screen and (min-width:1110px) {
+            .sideNavSticky {
+                position: sticky;
+                top: 5px;
+                z-index: 3;
+            }
+
+            .gridHeader-sideNav {
+                padding: 3em 3em 0em 3em;
+                width: 16vw;
+            }
+        }
+
+        /*Selective Hover State for SVG*/
+            .uxTemple {
+                display: block;
+                margin: 0em auto 1.6em auto;
+            }
+
+            .uxTemple-foundations {
+                fill: rgb(1,1,1);
+                filter: invert(6%) sepia(70%) saturate(7456%) hue-rotate(329deg) brightness(100%) contrast(128%);
+            }
+
+            #foundationsTag {
+                color: rgb(1,1,1);
+                filter: invert(6%) sepia(70%) saturate(7456%) hue-rotate(329deg) brightness(100%) contrast(128%);
+            }
+
+            .uxTemple-pillars {
+                fill: rgb(1,1,1);
+                filter: invert(80%) sepia(44%) saturate(354%) hue-rotate(9deg) brightness(90%) contrast(87%);
+            }
+
+            #pillarsTag {
+                color: rgb(1,1,1);
+                filter: invert(80%) sepia(44%) saturate(354%) hue-rotate(9deg) brightness(90%) contrast(87%);
+            }
+
+            .uxTemple-ornaments {
+                fill: rgb(1,1,1);
+                filter: invert(99%) sepia(2%) saturate(3746%) hue-rotate(115deg) brightness(91%) contrast(92%);
+            }
+
+            #ornamentsTag {
+                color: rgb(1,1,1);
+                filter: invert(99%) sepia(2%) saturate(3746%) hue-rotate(115deg) brightness(91%) contrast(92%);
+            }
+
+            @media only screen and (min-width: 1020px) {
+                .uxTemple-foundations {
+                    filter: brightness(1000);
+                }
+
+                svg:hover .uxTemple-foundations {
+                    filter: invert(6%) sepia(70%) saturate(7456%) hue-rotate(329deg) brightness(100%) contrast(128%);
+                }
+
+                #foundationsTag {
+                    filter: brightness(1000);
+                }
+
+                .uxTemple:hover ~ p #foundationsTag {
+                    color: rgb(1,1,1);
+                    filter: invert(6%) sepia(70%) saturate(7456%) hue-rotate(329deg) brightness(100%) contrast(128%);
+                }
+
+                .uxTemple-pillars {
+                    filter: brightness(1000);
+                }
+
+                svg:hover .uxTemple-pillars {
+                    filter: invert(80%) sepia(44%) saturate(354%) hue-rotate(9deg) brightness(90%) contrast(87%);
+                }
+
+                #pillarsTag {
+                    filter: brightness(1000);
+                }
+
+                .uxTemple:hover ~ p #pillarsTag {
+                    color: rgb(1,1,1);
+                    filter: invert(80%) sepia(44%) saturate(354%) hue-rotate(9deg) brightness(90%) contrast(87%);
+                }
+
+                .uxTemple-ornaments {
+                    filter: brightness(1000);
+                }
+
+                svg:hover .uxTemple-ornaments{
+                    filter: invert(99%) sepia(2%) saturate(3746%) hue-rotate(115deg) brightness(91%) contrast(92%);
+                }
+                
+                #ornamentsTag {
+                    filter: brightness(1000);
+                }
+
+                .uxTemple:hover ~ p #ornamentsTag {
+                    color: rgb(1,1,1);
+                    filter: invert(99%) sepia(2%) saturate(3746%) hue-rotate(115deg) brightness(91%) contrast(92%);
+                }
+            }
+
+           
+        /*/ Close Selective Hover State for SVG*/
+    </style>
+</head>
+<body id="body">
+    <div class="navBar">
+        <header>
+        <a href="https://www.bymichaelmarshall.com/">
+            <div class="homeIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17.195" height="16.25" viewBox="0 0 17.195 16.25"><path class="homeIconSVGPath" d="M14.207-2338.121H4.245a1.519,1.519,0,0,1-1.519-1.519v-4.762a1.52,1.52,0,0,1-1.652-.331,1.519,1.519,0,0,1,0-2.148l7.044-7.044a1.515,1.515,0,0,1,1.108-.444,1.515,1.515,0,0,1,1.108.444l7.044,7.044a1.519,1.519,0,0,1,0,2.148,1.52,1.52,0,0,1-1.652.331v4.762a1.519,1.519,0,0,1-1.519,1.519Zm-4.98-12.615h0Z" transform="translate(-0.629 2354.371)"/></svg>
+            </div>
+        </a>
+        </header>
+        <!-- Nav -->
+        <nav>
+            <div class="navWrapper">
+                <div class="nav">
+                <input id="checkbox" type="checkbox"/>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="menu">
+                        <li><a href="about">About</a></li> 
+                        <li class="textMenuCurrentPage">Contact &larr;</li>
+                        <li><a href="case-study">Case Study</a></li>
+                    </div>
+                </div>
+            </div>
+            <div class="text-navWrapper">
+                <div class="text-nav">
+                    <div class="textMenu">
+                        <li><a href="about">About</a></li>
+                        <li class="textMenuCurrentPage">Contact</li>
+                        <li><a href="case-study">Case Study</a></li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+<!--Body Content-->
+<div id="bodyContent">
+    <div class="gridContainer">
+        <div class="gridHeader"></div>
+        <div class="gridBody">
+            <h1 id="1goal">Get in touch</h1>
+            <p>I’ve decided to make some improvements so <b>my contact form is down for maintenance</b>. In the meantime, feel free to reach out on the social media platform of your choice - <i>or check back soon</i> if email me directly at: <a class="bodyLink" href="mailto:getintouch@bymichaelmarshall.com" target="_blank">getintouch@bymichaelmarshall.com</a></p>
+            <a href="https://www.instagram.com/bymichaelsmarshall/">
+                <div class="socialIconContainer">
+                    <svg class="socialIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path class="socialIconSVGPath" d="M15.233,5.488c-.843-.038-1.1-.046-3.233-.046s-2.389.008-3.232.046c-2.17.1-3.181,1.127-3.279,3.279-.039.844-.048,1.1-.048,3.233s.009,2.389.047,3.233c.1,2.148,1.106,3.18,3.279,3.279.843.038,1.1.047,3.233.047s2.39-.008,3.233-.046c2.17-.1,3.18-1.129,3.279-3.279.038-.844.046-1.1.046-3.233s-.008-2.389-.046-3.232c-.1-2.153-1.111-3.182-3.279-3.281ZM12,16.108A4.108,4.108,0,1,1,16.108,12,4.108,4.108,0,0,1,12,16.108ZM16.271,8.69a.96.96,0,1,1,.96-.96A.96.96,0,0,1,16.271,8.69ZM14.667,12A2.667,2.667,0,1,1,12,9.333,2.667,2.667,0,0,1,14.667,12ZM19,0H5A5,5,0,0,0,0,5V19a5,5,0,0,0,5,5H19a5,5,0,0,0,5-5V5A5,5,0,0,0,19,0Zm.952,15.3c-.132,2.909-1.751,4.521-4.653,4.654-.854.039-1.126.048-3.3.048s-2.444-.009-3.3-.048C5.794,19.819,4.182,18.2,4.048,15.3,4.009,14.445,4,14.173,4,12s.009-2.445.048-3.3C4.182,5.794,5.8,4.181,8.7,4.049,9.556,4.009,9.827,4,12,4s2.445.009,3.3.048c2.908.133,4.523,1.751,4.653,4.653.039.854.048,1.127.048,3.3S19.991,14.445,19.952,15.3Z"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="www.linkedin.com/in/ms-marshall">
+                <div class="socialIconContainer">
+                    <svg class="socialIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path class="socialIconSVGPath" d="M19,0H5A5,5,0,0,0,0,5V19a5,5,0,0,0,5,5H19a5,5,0,0,0,5-5V5A5,5,0,0,0,19,0ZM8,19H5V8H8ZM6.5,6.732A1.764,1.764,0,1,1,8.25,4.968,1.758,1.758,0,0,1,6.5,6.732ZM20,19H17V13.4c0-3.368-4-3.113-4,0V19H10V8h3V9.765c1.4-2.586,7-2.777,7,2.476Z"/>
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <div class="gridMargin"></div>
+        <div class="hideDesk hideMob hideTablet">
+            <div class="gridHeader"></div>
+            <div class="gridBody">
+                <a href="#">
+                    <svg class="btt-btn" xmlns="http://www.w3.org/2000/svg" width="52" height="56.784" viewBox="0 0 84 91.728" preserveAspectRatio="none">
+                        <path class="bttSVGpath" d="M30.95-2334.494l-12.293-12.292L6.364-2334.494a3,3,0,0,1-4.243,0,3,3,0,0,1,0-4.243l14.143-14.143a2.994,2.994,0,0,1,2.393-.866,3,3,0,0,1,2.393.866l14.143,14.143a3,3,0,0,1,0,4.243,2.991,2.991,0,0,1-2.122.879A2.989,2.989,0,0,1,30.95-2334.494Z" transform="translate(23.343 2353.757)"/>
+                        <rect class="bttSVGrect1" width="28" height="6" rx="3" transform="translate(45 17.728) rotate(90)"/>
+                        <rect class="bttSVGrect2" width="42" height="6" rx="3" transform="translate(63 81.728) rotate(180)"/>
+                        <rect class="bttSVGrect2" width="84" height="6" rx="3" transform="translate(84 91.728) rotate(180)"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="gridMargin"></div>
+        </div>
+    </div>
+</div>
+<!--/Body Content-->
+    <footer class="footer">
+        <a href="https://bymichaelmarshall.com/terms">
+            <p class="admintext">©<span id="currentYear">2021</span>
+            </p>
+        </a>
+        <div class="icons">
+            <a href="contact">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
+            </a>
+        </div>
+    </footer> 
+</body>
+<!--JS-->
+<script src="script.js"></script>
+</html>
