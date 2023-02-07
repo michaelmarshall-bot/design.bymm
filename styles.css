@@ -1,6 +1,31 @@
-       /* Re-Add Once Coded html {
+       /* html {
             scroll-behavior: smooth;
         } */
+
+/*Scroll Bar Styling - noncompat with IE and Safari currently*/
+@media only screen and (min-width: 1020px) {
+    /* width */
+    ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #B5DFE0;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 255, 255);
+  }
+}
+
 
 /*Navigation Bar*/
         .navBar {
@@ -272,7 +297,7 @@
         font-family: 'Nunito', arial, sans-serif;
         font-weight: 400;
         font-size: 1em;
-        line-height: 1.4em;
+        line-height: 1.5em;
         color: #ffffff;
         background-color: #212121;
         margin: 0px 0px 0px 0px;
