@@ -434,6 +434,10 @@
     }
   
     @media only screen and (min-width: 1020px) {
+        #bodyContent {
+            overflow-x: visible;
+        }
+
         .designLink {
             text-decoration: none;
             color: #fff;
