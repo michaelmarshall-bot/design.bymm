@@ -47,7 +47,7 @@
             width: 18px;
             margin: 0px 0px 0px 10px;
             float: left;
-            z-index: 4;
+            z-index: 5;
         }
 
         .homeIconSVGPath {
@@ -73,7 +73,7 @@
         display: flex;
         justify-content: left;
         align-items: center;
-        z-index: 2;
+        z-index: 3;
     }
 
     .nav {
