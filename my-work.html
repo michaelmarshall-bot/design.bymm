@@ -1,0 +1,587 @@
+<!DOCTYPE html lang="eng">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="bymichaelmarshall" content="Design & Writing by Michael Marshall">
+    <meta name="canada,user experience,ux,user interface,ui,publishing,media,portfolio,contractor,design,writing,music,writer,designer,musician,typesetting,web design,michael,marshall,michael marshall" content="HTML, CSS, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google/Android Favicon Meta-->
+    <meta name="theme-color" content="#212121">
+    <!--Standard Favicon-->
+    <link rel="icon" href="favicon/bymmfavicon.png" type="image/svg+xml">
+     <!--iOS Favicons-->
+     <link rel="apple-touch-icon" href="favicon/iOS-touch-icon.png">
+     <!--Google/Android Favicon-->
+     <link rel="manifest" href="manifest.json">
+    <title>My Work | Design By MM</title>
+    <!--Styles-->
+    <link rel="stylesheet" href="styles.css">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,900;1,400;1,900&display=swap" rel="stylesheet">
+    <style>
+        .gridHeader-sideNav {
+                font-weight: 900;
+                max-width: 280px;
+                width: 100%;
+                margin-top: 0.67em;
+                padding: 0em 3em 0em 3em;
+            }
+        /*Full-width Row Background*/
+        html, .uxCaseblock {
+            overflow-x: hidden;
+        }
+
+        .uxCaseBlock {
+            position: relative; /* for child pseudo-element */
+            margin: 0 -600rem;
+            z-index: 1;
+            /* add back negative margin value */
+            padding: 0.25rem 600rem;
+            background: #2c2c2c;
+        }
+
+        html, .uxCaseBlock-extended {
+            overflow-x: hidden;
+        }
+
+        .uxCaseBlock-extended {
+            position: relative; /* for child pseudo-element */
+            margin: 0 -600rem;
+            z-index: 1;
+            /* add back negative margin value */
+            padding: 0.25rem 600rem;
+            background: #2c2c2c;
+        }
+
+        .desktopViewbox {
+                max-height: 337.50;
+                max-width: 600;
+                overflow: auto;
+                margin: 1.8em 0em 1.8em 0em;
+                border: solid 8px #000000;
+                border-radius: 8px;
+                box-shadow: 8px 10px 6px #00000060;
+            }
+
+        .desktopViewbox::-webkit-scrollbar-track {
+                background: #000000;
+            }
+
+        .desktopWireframe {
+                max-width: 100%;
+            }
+
+        .mockRomerDesktop {
+                max-height: none;
+        }
+
+        .mobileViewbox {
+                margin: 0em auto 1.8em auto;
+                max-height: 676;
+                max-width: 370;
+                overflow: auto;
+                border: solid 8px #000000;
+                border-radius: 8px;
+                box-shadow: 8px 10px 6px #00000060;
+            }
+
+        .mobileViewbox::-webkit-scrollbar-track {
+                background: #000000;
+            }
+
+        .mobileWireframe {
+                max-width: 100%;
+            }
+
+        .magViewbox {
+                margin: 1em auto 1.8em auto;
+                max-height: 676;
+                max-width: 370;
+                overflow: auto;
+                border: solid 8px #000000;
+                border-radius: 8px;
+                box-shadow: 10px 10px 20px #111111,
+                            -8px -8px 16px #323232;
+            }
+
+        .sideNavSticky {
+                min-width: 250px;
+            }
+
+        /*Logos*/
+        .logoContainer {
+            margin-top: 4em;
+            margin-bottom: 3em;
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            overflow-x: visible;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
+        }
+
+        .logoContainer::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+
+        .logoSample {
+            margin: 0em 1em 0em 31%;
+            overflow: visible;
+            scroll-snap-align: center;
+        }
+
+        .logoSampleLast {
+            margin-right: 31%;
+        }
+
+        .logoImg {
+            display: block;
+            max-height: 150px;
+            max-width: 150px;
+            margin: 0em 1em 0em 1em;
+        }
+
+        #horizontalScrollIndicator {
+            position: relative;
+            transform: rotate(90deg);
+            right: 116;
+        }
+
+        #horizScrollMod {
+            fill: #7E7E7E;
+        }
+
+        #ejEmb {
+            max-width: none;
+            position: relative;
+            right: -5;
+        }
+
+        .horizNavArrow {
+            text-align: center;
+            margin-block-start: 1.8em;
+            margin-block-end: 1.8em;
+        }
+
+        .horizMagArrow {
+            text-align: center;
+            margin-block-start: 1em;
+            margin-block-end: 0.4em;
+        }
+
+        .magArrBottom {
+            margin-block-start: 0.4em;
+            margin-block-end: 1.8em;
+        } 
+
+        /*Layout Spreads*/
+
+        .magContainer {
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            overflow-x: visible;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
+            border-radius: 20px;
+            background: #212121;
+            box-shadow: inset 10px 10px 20px #111111,
+                        inset -10px -10px 20px #323232;
+        }
+
+        .magContainer::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+
+        .magSample {
+            margin: 0em 2em 0em 31%;
+            overflow: visible;
+            scroll-snap-align: start;
+        }
+
+        .magSampleLast {
+            margin-right: 31%;
+        }
+
+        .magImg {
+            display: block;
+            max-height: 550px;
+            max-width: 620px;
+            margin: 2em 0em 1em 1em;
+        }
+
+        .vbcentre {
+            margin-top: 2.8em;
+        }
+
+        #horizontalScrollIndicator {
+            position: relative;
+            transform: rotate(90deg);
+            right: 116;
+        }
+
+        #horizScrollMod {
+            fill: #7E7E7E;
+        }
+
+        .horizNavArrow {
+            text-align: center;
+        }
+
+        .magBlock {
+            background: #212121;
+        }
+
+        /*/Full-width Row Background Close*/
+        @media only screen and (min-width:760px) {
+            .gridHeader-sideNav {
+                    padding: 3em 10% 0em 10%;
+                }
+
+            .logoSample {
+                 margin: 0em 1em 0em 40%;
+            }
+        }
+        @media only screen and (min-width:1020px) {
+            .uxCaseblock-extended {
+                margin: 0rem;
+                z-index: 1;
+            /* add back negative margin value */
+                padding: 0rem;
+                background: transparent;
+                overflow: visible;
+                }
+            
+            .mobileViewbox {
+                    margin: 4em auto 1.8em 0em;
+                    max-width: 320;
+                }
+            
+            .magSample {
+                    margin: 0em 2em 0em 31%;
+                    scroll-snap-align: center;
+                }
+
+            .magViewbox {
+                    margin: 4em auto 1.8em 0em;
+                    max-width: 320;
+                }
+
+            .vbleft {
+                    margin: 4em 0em 1.8em auto;
+                }
+
+            .vbcentre {
+                margin: 1em auto 1.8em auto;
+            }
+
+            .uxCaseblock {
+                background: #2c2c2c00;
+            }
+
+            .desktopViewbox {
+                position: relative;
+                z-index: 11;
+            }
+
+            /*Logos*/
+            .logoContainer {
+                margin: 1em 0em 1em auto;
+                width: 100%;
+                max-width: 220px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                overflow-x: visible;
+                overflow-y: hidden;
+                scroll-behavior: smooth;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                position: relative;
+            }
+
+            .logoContainer::-webkit-scrollbar {
+                -webkit-appearance: none;
+            }
+
+            .logoSample {
+                margin: 0em auto 0em auto;
+                overflow: visible;
+                scroll-snap-align: center;
+            }
+
+            .logoSampleLast {
+                margin: 2em auto;
+            }
+
+            .logoImg {
+                display: block;
+                max-height: 120px;
+                max-width: 120px;
+                margin: 2em 1em 2em 1em;
+            }
+
+            .magContainer {
+                margin-top: 1em;
+                margin-bottom: 3em;
+            }
+
+            .magContainer::-webkit-scrollbar {
+                height: 8px;
+            }
+
+            .magImg {
+                margin: 2em 0em 1.8em 0em;
+                display: block;
+                max-height: 550px;
+                max-width: 550px;
+            }
+
+
+            #horizontalScrollIndicator {
+                position: relative;
+                transform: rotate(90deg);
+                right: 116;
+            }
+
+            #horizScrollMod {
+                fill: #7E7E7E;
+            }
+
+            #ejEmb {
+                max-width: none;
+                position: relative;
+                right: -5;
+            }
+
+            #litho {
+                max-width: 110px;
+                max-height: 110px;
+            }
+
+            .horizNavArrow {
+                display: none;
+            }
+
+            .horizMagArrow {
+                display: none;
+            }
+
+            .sideNavSticky {
+                position: sticky;
+                top: 5px;
+                z-index: 3;
+            }
+
+            .gridHeader-sideNav {
+                padding: 3em 3em 0em 3em;
+                width: 16vw;
+            }
+        }
+           
+        /*/ Close Selective Hover State for SVG*/
+    </style>
+</head>
+<body id="body">
+    <div class="navBar">
+        <header>
+        <a href="https://www.bymichaelmarshall.com/">
+            <div class="homeIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17.195" height="16.25" viewBox="0 0 17.195 16.25"><path class="homeIconSVGPath" d="M14.207-2338.121H4.245a1.519,1.519,0,0,1-1.519-1.519v-4.762a1.52,1.52,0,0,1-1.652-.331,1.519,1.519,0,0,1,0-2.148l7.044-7.044a1.515,1.515,0,0,1,1.108-.444,1.515,1.515,0,0,1,1.108.444l7.044,7.044a1.519,1.519,0,0,1,0,2.148,1.52,1.52,0,0,1-1.652.331v4.762a1.519,1.519,0,0,1-1.519,1.519Zm-4.98-12.615h0Z" transform="translate(-0.629 2354.371)"/></svg>
+            </div>
+        </a>
+        </header>
+        <!-- Nav -->
+        <nav>
+            <div class="navWrapper">
+                <div class="nav">
+                <input id="checkbox" type="checkbox"/>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div class="menu">
+                        <li><a href="index">About</a></li> 
+                        <li><a href="contact">Contact</a></li>
+                        <li><a href="case-study">Case Study</a></li>
+                        <li class="textMenuCurrentPage">My Work &larr;</li>
+                    </div>
+                </div>
+            </div>
+            <div class="text-navWrapper">
+                <div class="text-nav">
+                    <div class="textMenu">
+                        <li><a href="index">About</a></li>
+                        <li><a href="contact">Contact</a></li>
+                        <li><a href="case-study">Case Study</a></li>
+                        <li class="textMenuCurrentPage">My Work</li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+<!--Body Content-->
+<div id="bodyContent">
+    <div class="gridContainer">
+        <div class="gridHeader sideNavSticky">
+            <div class="gridHeader-sideNav">
+                <p style="margin-top: 0em;"><a class="designLink" href="#">Digital Products & Branding</a></p>
+                <p><a class="designLink" href="#bcl">Publication & Layout Design</a></p>
+            </div>
+        </div>
+        <div class="gridBody">
+            <h1 id="1goal">Some things I've made</h1>
+            <p>Digital media, magazines, logos, books, and branding. If you’re interested in my process take a look at <a class="bodyLink" href="case-study">how I work</a> or <a class="bodyLink" href="contact">get in touch.</a></p>
+        </div>
+        <div class="gridMargin"></div>
+        
+        <div class="gridHeader">
+        </div>
+        <div class="gridBody">
+            <h1>Digital Products & Branding</h1>
+        </div>
+        <div class="gridMargin">
+        </div>
+
+        <div class="gridHeader">
+            <div class="uxCaseBlock">
+                <p class="horizNavArrow">&rarr;</p>
+                <div class="logoContainer">
+                    <div class="logoSample">
+                        <img src="assets/logos/obiArt.png" class="logoImg" id="obiArt"/>
+                    </div>
+                    <div class="logoSample">
+                        <img src="assets/logos/ej.png" class="logoImg"/>
+                    </div>
+                    <div class="logoSample">
+                        <img src="assets/logos/ejEmb.png" class="logoImg" id="ejEmb"/>
+                    </div>
+                    <div class="logoSample">
+                        <img src="assets/logos/litho.png" class="logoImg" id="litho"/>
+                    </div>
+                    <div class="logoSample logoSampleLast">
+                        <img src="assets/logos/mokt.png" class="logoImg"/>
+                    </div>
+                </div>
+                <p class="horizNavArrow">&larr;</p>
+            </div>
+        </div>
+        <div class="gridBody">
+            <div class="desktopViewbox">    
+                <img src="assets/mockLongformDesktop.png" class="desktopWireframe"/>
+            </div>
+            <div class="desktopViewbox mockRomerDesktop">    
+                <img src="assets/mockRomerDesktop.gif" class="desktopWireframe"/>
+            </div>
+        </div>
+        <div class="gridMargin">
+            <div class="mobileViewbox mockRomerMobile">    
+                <img src="assets/mockRomerMobile.gif" class="mobileWireframe"/>
+            </div>
+        </div>
+        
+        <div class="gridHeader"></div>
+        <div class="gridBody">
+            <h1 id="bcl">Publication & Layout Design</h1>
+        </div>
+        <div class="gridMargin"></div>
+        <div class="gridHeader">
+            <div class="magViewbox vbleft mockRomerMobile">    
+                <img src="assets/print/novDecTEACHcover.jpg" class="mobileWireframe"/>
+            </div>
+        </div>
+        <div class="gridBody">
+            <div class="uxCaseBlock magBlock">
+                <p class="horizMagArrow">&rarr;</p>
+                <div class="magContainer">
+                    <div class="magSample">
+                        <img src="assets/print/restrictedAccessFeatureP1.jpg" class="magImg"/>
+                    </div>
+                    <div class="magSample">
+                        <img src="assets/print/restrictedAccessFeatureP2.jpg" class="magImg"/>
+                    </div>
+                </div>
+                <p class="horizMagArrow magArrBottom">&larr;</p>
+            </div>
+        </div>
+        <div class="gridMargin">
+            <div class="magViewbox mockRomerMobile">    
+                <img src="assets/print/janFebTEACHCover.jpg" class="mobileWireframe"/>
+            </div>
+        </div>
+        
+        <div class="gridHeader">
+            <div class="magViewbox vbleft mockRomerMobile">    
+                <img src="assets/print/copecopecopeCover.jpg" class="mobileWireframe"/>
+            </div>
+        </div>
+        <div class="gridBody">
+            <div class="uxCaseBlock magBlock">
+                <p class="horizMagArrow">&rarr;</p>
+                <div class="magContainer">
+                    <div class="magSample">
+                        <img src="assets/print/kateP1Interview.jpg" class="magImg"/>
+                    </div>
+                    <div class="magSample">
+                        <img src="assets/print/kateP2Interview.jpg" class="magImg"/>
+                    </div>
+                    <div class="magSample">
+                        <img src="assets/print/kateP3Interview.jpg" class="magImg"/>
+                    </div>
+                    <div class="magSample">
+                        <img src="assets/print/kateP4Interview.jpg" class="magImg"/>
+                    </div>
+                </div>
+                <p class="horizMagArrow magArrBottom">&larr;</p>
+                <div class="magViewbox vbcentre mockRomerMobile">    
+                    <img src="assets/print/nesboSnowmanCover.jpg" class="mobileWireframe"/>
+                </div>
+            </div>
+        </div>
+        <div class="gridMargin">
+            <div class="magViewbox mockRomerMobile">    
+                <img src="assets/print/ignitionachievedPoster.jpg" class="mobileWireframe"/>
+            </div>
+        </div>
+
+
+        <div class="gridHeader"></div>
+        <div class="gridBody">
+            <a href="#">
+                <svg class="btt-btn" xmlns="http://www.w3.org/2000/svg" width="52" height="56.784" viewBox="0 0 84 91.728" preserveAspectRatio="none">
+                    <path class="bttSVGpath" d="M30.95-2334.494l-12.293-12.292L6.364-2334.494a3,3,0,0,1-4.243,0,3,3,0,0,1,0-4.243l14.143-14.143a2.994,2.994,0,0,1,2.393-.866,3,3,0,0,1,2.393.866l14.143,14.143a3,3,0,0,1,0,4.243,2.991,2.991,0,0,1-2.122.879A2.989,2.989,0,0,1,30.95-2334.494Z" transform="translate(23.343 2353.757)"/>
+                    <rect class="bttSVGrect1" width="28" height="6" rx="3" transform="translate(45 17.728) rotate(90)"/>
+                    <rect class="bttSVGrect2" width="42" height="6" rx="3" transform="translate(63 81.728) rotate(180)"/>
+                    <rect class="bttSVGrect2" width="84" height="6" rx="3" transform="translate(84 91.728) rotate(180)"/>
+                </svg>
+            </a>
+        </div>
+        <div class="gridMargin"></div>
+    </div>
+</div>
+<!--/Body Content-->
+    <footer class="footer">
+        <a href="https://bymichaelmarshall.com/terms">
+            <p class="admintext">©<span id="currentYear">2021</span>
+            </p>
+        </a>
+        <div class="icons">
+            <a href="contact">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
+            </a>
+        </div>
+    </footer> 
+</body>
+<!--JS-->
+<script src="script.js">
+</script>
+</html>
