@@ -40,7 +40,7 @@
             z-index: 1;
         }
 
-        .homeIcon {
+        /*.homeIcon {
             display: block;
             position: relative;
             top: 10px;
@@ -56,7 +56,7 @@
 
         .homeIconSVGPath:hover {
             fill: #B5DFE0;
-        }
+        }*/
 
         .navWrapper {
             align-self: right;
@@ -291,14 +291,19 @@
 /*Menu Styles Close*/
 
 /*Body Settings*/
+    
+    body {
+        overflow-x: hidden;
+    }
+
     body {
         position: relative;
-        font-family: 'Nunito', arial, sans-serif;
+        font-family: 'Nunito Sans';
         font-weight: 400;
         font-size: 1em;
         line-height: 1.5em;
-        color: #ffffff;
-        background-color: #212121;
+        color: #800020;
+        background-color: #B5DFE0;
         margin: 0px 0px 0px 0px;
         min-height: 100vh;
     }
@@ -355,26 +360,49 @@
     }
 
     h1 {
-        font-weight: 900;
-        font-size: 1em;
-        line-height: 1.2em;
-        padding: 3em 0px 1em 0px;
+        font-family: 'Krona One', 'Arial', sans-serif;
+        font-weight: 400;
+        font-size: 3em;
+        text-transform: uppercase;
+        line-height: 0.25em;
+        padding: 3em 0px 0em 0px;
      }
+
+    .fontWarp {
+        font-family: 'Engagement', 'Garamond', serif;
+        font-weight: 400;
+        font-size: 2em;
+        text-transform: uppercase;
+    }
  
     h2 {
-        font-weight: 900;
-        font-size: 1em;
+       font-family: 'Krona One', Arial, sans-serif;
+        font-weight: 400;
+        font-size: 1.5em;
         line-height: 1.2em;
-        color: #B5DFE0;
+        color: #800020;
         padding: 1em 0em 0em 0em;
+        text-align: center;
+    }
+
+    h3 {
+        font-family: 'Krona One', Arial, sans-serif;
+        font-weight: 400;
+        font-size: 1em;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
     }
 
     p {
         display: block;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
+        margin-block-start: 1.5em;
+        margin-block-end: 1.5em;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
+    }
+
+    h1 ~ p {
+        margin-block-start: 0em;
     }
 
     .paddingDeficit {
@@ -390,7 +418,7 @@
     }
 
     .dateSub {
-        font-weight: 900;
+        font-weight: 400;
     }
 
     .imageAsset {
@@ -426,11 +454,56 @@
         margin: 0px auto;
     }
 
+@media only screen and (min-width: 520px) {
+    
+    body {
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+
+    h1 {
+        font-family: 'Krona One', 'Arial', sans-serif;
+        font-weight: 400;
+        font-size: 3.2em;
+        text-transform: uppercase;
+        line-height: 0.25em;
+        padding: 3em 0px 0em 0px;
+     }
+
+    .fontWarp {
+        font-family: 'Engagement', 'Garamond', serif;
+        font-weight: 400;
+        font-size: 2.4em;
+        text-transform: uppercase;
+    }
+ 
+    h2 {
+       font-family: 'Krona One', Arial, sans-serif;
+        font-weight: 400;
+        font-size: 2em;
+        line-height: 1.2em;
+        color: #800020;
+        padding: 1em 0em 0em 0em;
+        text-align: center;
+    }
+
+    h3 {
+        font-family: 'Krona One', Arial, sans-serif;
+        font-weight: 400;
+        font-size: 1em;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+    }
+}
+
 /*body flex*/
 
     .gridContainer {
-        max-width: 600px;
         margin: 20px auto 0px auto;
+    }
+
+    .grid-margin:last-of-type {
+        margin-bottom: 2em;
     }
   
     @media only screen and (min-width: 1020px) {
@@ -449,7 +522,6 @@
         }
 
         .gridContainer {
-            max-width: none;
             margin-top: 2%;
             display: grid; 
             grid-template-columns: 1fr 600px 1fr; 
@@ -477,6 +549,10 @@
     @media only screen and (min-width: 760px) and (min-height: 1020px) {
         .hideTablet {
             display: none;
+        }
+
+        .gridContainer {
+            grid-template-columns: 1fr 600px 1fr
         }
     }
 
@@ -566,7 +642,7 @@ svg:active .bttSVGrect2{
     position: absolute;
     text-align: left;
     align-self: center;
-    font-weight: 900;
+    font-weight: 400;
     top: 48%;
     left: 10px;
     margin: 0px 0px 0px 0px;
