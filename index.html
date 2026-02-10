@@ -332,10 +332,83 @@
         }
         }
 
+        @media only screen and (min-width: 540px) {
+        .gridBody:has(#testimonialContainer)::before {
+            content: "";
+            cursor: pointer;
+            display: block;
+            opacity: 1;
+            position: absolute;
+            background-image: linear-gradient(to right, #CEC177, #CEC177);
+            background-position: center;
+            transition: 0.3s ease;
+            z-index: -1;
+            width: 0px;
+            height: 0px;
+            top: 67%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            margin: 0px auto 0px auto;
+        }
+
+        .gridBody:has(#testimonialContainer:hover)::before {
+            transition: 0.3s ease;
+            width: 1000px;
+            height: 1000px;
+            border-radius: 50%;
+        }
+
+        .gridBody:has(#testimonialContainer:hover) .slider__nav {
+            outline: 3px solid rgb(128 0 32);
+            outline-offset: -6px;
+            box-shadow: 0 0 0 0 rgb(128 0 32), 0 0 0 0 rgba(128, 0, 32, 0);
+            cursor: pointer;
+            -webkit-appearance: none;
+                -moz-appearance: none;
+                    appearance: none;
+            -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+            }
+
+       .gridBody:has(#testimonialContainer:hover) .slider__nav:checked {
+            -webkit-animation: check2 0.4s linear forwards;
+                animation: check2 0.4s linear forwards;
+             outline: 3px solid rgb(206 193 119);
+            box-shadow: 0 0 0 0 rgb(206 193 119), 0 0 0 0 rgba(206, 193, 119, 0);
+        }
+
+        .gridBody:has(#testimonialContainer:hover) input:checked {
+            
+        }
+
+        @-webkit-keyframes check2 {
+        50% {
+            outline-color: rgb(181 223 224);
+            box-shadow: 0 0 0 12px rgb(181 223 224), 0 0 0 36px rgba(181, 223, 224, 0.336);
+        }
+        100% {
+            outline-color: rgb(181 223 224);
+            box-shadow: 0 0 0 0 rgb(181 223 224), 0 0 0 0 rgba(181, 223, 224, 0);
+        }
+        }
+
+        @keyframes check2 {
+        50% {
+            outline-color: rgb(181 223 224);
+            box-shadow: 0 0 0 12px rgb(181 223 224), 0 0 0 36px rgba(181, 223, 224, 0.336);
+        }
+        100% {
+            outline-color: rgb(181 223 224);
+            box-shadow: 0 0 0 0rgb(181 223 224), 0 0 0 0 rgba(181, 223, 224, 0);
+        }
+        }
+        }
+
 
 
         /*Logo Ticker*/
-
+        
         .img-tickerContainer {
             overflow: visible; 
             margin-top: 7em;
@@ -400,6 +473,8 @@
             display: block;
         }
 
+        /*Contact Styles*/
+
         #emailLink {
             position: relative;
             overflow: visible;
@@ -455,11 +530,34 @@
             z-index: -1;
             width: 0px;
             height: 0px;
-            top: 17%;
+            top: 22%;
             transform: translate(-50%, -50%);
             border-radius: 0px;
         }
 
+        .contactIcons a:nth-of-type(1)::before {
+            left: 32.5%;
+        }
+
+        .contactIcons a:nth-of-type(2)::before {
+            left: 50%;
+        }
+
+         .contactIcons a:nth-of-type(3)::before {
+            left: 67.5%;
+        }
+
+        .contactIcons a:hover::before {
+            width: 50px;
+            height: 50px;
+            border-radius: 60px;
+        }
+
+        @media only screen and (min-width: 520px) {
+        .contactIcons a::before {
+            top: 17%;
+        }
+        
         .contactIcons a:nth-of-type(1)::before {
             left: 38.5%;
         }
@@ -478,33 +576,7 @@
             border-radius: 60px;
         }
 
-        /*.contactIcons svg:hover {
-            border-radius: 50%;
-            box-shadow: 0 0 0 12px #cec17700, 0 0 0 20px rgba(214, 202, 92, 0);
-            animation: spotlight 0.4s linear;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
         }
-
-        @-webkit-keyframes spotlight {
-        50% {
-            box-shadow: 0 0 0 12px #CEC177, 0 0 0 20px rgb(214, 202, 92);
-        }
-        100% {
-            box-shadow: 0 0 0 0 #CEC177, 0 0 0 0 rgb(214, 202, 92);
-        }
-        }
-
-        @keyframes spotlight {
-        50% {
-            outline-color: #CEC177;
-            box-shadow: 0 0 0 12px #CEC177, 0 0 0 30px rgb(214, 202, 92);
-        }
-        100% {
-            outline-color: #CEC177;
-            box-shadow: 0 0 0 0 #CEC177, 0 0 0 0 rgb(214, 202, 92);
-        }
-        }*/
 
     </style>
 </head>
