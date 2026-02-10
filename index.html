@@ -23,7 +23,6 @@
         #bodyContent {
             padding-top: 33vh;
         }
-
        
 
         .CVslabContainer {
@@ -35,7 +34,7 @@
             position: relative;
             height: 53px;
             background: #800020;
-            color: #B5DFE0;
+            color: #CEC177;
             padding: 10px 15px;
             margin-top: 6px;
             margin-bottom: 6px;
@@ -63,13 +62,18 @@
             font-style: italic;
         }
 
+        @media only screen and (min-width: 520px) {
+            .CVslab {
+                height: 80px;
+            }
+        }
+
          @media only screen and (min-width: 1020px) {
             #bodyContent {
                 padding-top: 10vh;
             }
 
             .CVslab {
-                height: 78px;
                 width: 600px;
             }
 
@@ -93,15 +97,19 @@
             }
 
             .ongoing {
-                width: 50vw;
+                width: 925px;
                 min-width: 850px;
                 max-width: 1000px;
                 border-radius: 0px 0px 50px 0px;
+                transition: 0.5s ease;
             }
 
             .ongoing:first-of-type {
                 min-width: 850px;
+            }
 
+            .ongoing:hover {
+                width: 1000px;
             }
         }
 
@@ -358,13 +366,12 @@
         }
 
         @media only screen and (min-width: 760px) {
-            /*.img-tickerContainer {
-                -webkit-mask-image: linear-gradient(to right, transparent, black -80%, black 160%, transparent);
-                mask-image: linear-gradient(to right, transparent, black -80%, black 160%, transparent);
-            }*/
-            
             .img-ticker {
-            animation: ticker-kf 30s linear infinite;
+                animation: ticker-kf 30s linear infinite;
+            }
+
+            .img-tickerContainer:hover .img-ticker {
+                animation-play-state: paused;
             }
         }
 
@@ -393,25 +400,122 @@
             display: block;
         }
 
+        #emailLink {
+            position: relative;
+            overflow: visible;
+        }
+
+        #emailLink::before {
+            content: "";
+            cursor: pointer;
+            display: block;
+            opacity: 1;
+            position: absolute;
+            background-image: linear-gradient(to right, #CEC177, #CEC177);
+            background-position: center;
+            transition: 0.3s ease;
+            z-index: -1;
+            width: 0px;
+            height: 50px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50px;
+            margin: 0px auto 0px auto;
+        }
+        #emailLink:hover::before {
+            width: 425px;
+            height: 50px;
+            border-radius: 50px;
+            transition: 0.3s ease;
+        }
+
         .contactIcons {
             display: flex;
+            position: relative;
             justify-content: center;
             padding-bottom: 2em;
         }
 
         .contactIcons svg {
             margin: 0 20px 0 20px;
+            animation: none;
+            box-shadow: 0 0 0 12px #cec17700, 0 0 0 20px rgba(214, 202, 92, 0);
         }
+
+        .contactIcons a::before {
+            content: "";
+            cursor: pointer;
+            display: block;
+            opacity: 1;
+            position: absolute;
+            background-image: linear-gradient(to right, #CEC177, #CEC177);
+            background-position: center;
+            transition: 0.3s ease;
+            z-index: -1;
+            width: 0px;
+            height: 0px;
+            top: 17%;
+            transform: translate(-50%, -50%);
+            border-radius: 0px;
+        }
+
+        .contactIcons a:nth-of-type(1)::before {
+            left: 38.5%;
+        }
+
+        .contactIcons a:nth-of-type(2)::before {
+            left: 50%;
+        }
+
+         .contactIcons a:nth-of-type(3)::before {
+            left: 61.5%;
+        }
+
+        .contactIcons a:hover::before {
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
+        }
+
+        /*.contactIcons svg:hover {
+            border-radius: 50%;
+            box-shadow: 0 0 0 12px #cec17700, 0 0 0 20px rgba(214, 202, 92, 0);
+            animation: spotlight 0.4s linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        @-webkit-keyframes spotlight {
+        50% {
+            box-shadow: 0 0 0 12px #CEC177, 0 0 0 20px rgb(214, 202, 92);
+        }
+        100% {
+            box-shadow: 0 0 0 0 #CEC177, 0 0 0 0 rgb(214, 202, 92);
+        }
+        }
+
+        @keyframes spotlight {
+        50% {
+            outline-color: #CEC177;
+            box-shadow: 0 0 0 12px #CEC177, 0 0 0 30px rgb(214, 202, 92);
+        }
+        100% {
+            outline-color: #CEC177;
+            box-shadow: 0 0 0 0 #CEC177, 0 0 0 0 rgb(214, 202, 92);
+        }
+        }*/
+
     </style>
 </head>
 <body id="body">
     <div class="navBar">
         <header>
-        <!--<a href="https://design.bymichaelmarshall.com/">
+        <!--<a href="https://design.bymichaelmarshall.com/">-->
             <div class="homeIcon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="17.195" height="16.25" viewBox="0 0 17.195 16.25"><path class="homeIconSVGPath" d="M14.207-2338.121H4.245a1.519,1.519,0,0,1-1.519-1.519v-4.762a1.52,1.52,0,0,1-1.652-.331,1.519,1.519,0,0,1,0-2.148l7.044-7.044a1.515,1.515,0,0,1,1.108-.444,1.515,1.515,0,0,1,1.108.444l7.044,7.044a1.519,1.519,0,0,1,0,2.148,1.52,1.52,0,0,1-1.652.331v4.762a1.519,1.519,0,0,1-1.519,1.519Zm-4.98-12.615h0Z" transform="translate(-0.629 2354.371)"/></svg>
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="17.195" height="16.25" viewBox="0 0 17.195 16.25"><path class="homeIconSVGPath" d="M14.207-2338.121H4.245a1.519,1.519,0,0,1-1.519-1.519v-4.762a1.52,1.52,0,0,1-1.652-.331,1.519,1.519,0,0,1,0-2.148l7.044-7.044a1.515,1.515,0,0,1,1.108-.444,1.515,1.515,0,0,1,1.108.444l7.044,7.044a1.519,1.519,0,0,1,0,2.148,1.52,1.52,0,0,1-1.652.331v4.762a1.519,1.519,0,0,1-1.519,1.519Zm-4.98-12.615h0Z" transform="translate(-0.629 2354.371)"/></svg>-->
             </div>
-        </a>-->
+        <!--</a>-->
         </header>
         <!-- Nav -->
         <!--<nav>
@@ -1341,7 +1445,7 @@
         </div>
         <div class="gridBody">
             <h2>Co<span class="fontWarp" style="font-size: 0.8em;">n</span>tact</h2>
-            <p style="text-align: center; text-decoration: underline;">
+            <p id="emailLink" style="text-align: center; text-decoration: underline;">
                 <a href="mailto:getintouch@bymichaelmarshall.com">getintouch@bymichaelmarshall.com</a>
             </p>
             <div class="contactIcons">

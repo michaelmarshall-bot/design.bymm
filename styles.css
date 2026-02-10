@@ -40,7 +40,7 @@
             z-index: 1;
         }
 
-        /*.homeIcon {
+        .homeIcon {
             display: block;
             position: relative;
             top: 10px;
@@ -50,7 +50,7 @@
             z-index: 5;
         }
 
-        .homeIconSVGPath {
+        /*.homeIconSVGPath {
             fill: #fff;
         }
 
@@ -217,6 +217,9 @@
 
 /*Close Nav Icon*/
 
+/*Dark & Light Mode*/
+
+
 /*Tablet Breakpoint*/
  @media only screen and (min-width: 760px){
 
@@ -291,10 +294,6 @@
 /*Menu Styles Close*/
 
 /*Body Settings*/
-    
-    body {
-        overflow-x: hidden;
-    }
 
     body {
         position: relative;
@@ -306,6 +305,7 @@
         background-color: #B5DFE0;
         margin: 0px 0px 0px 0px;
         min-height: 100vh;
+        overflow-x: hidden;
     }
 
     #bodyContent {
