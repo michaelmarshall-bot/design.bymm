@@ -1,3 +1,19 @@
+:root {
+  --bg-color: hsl(181, 41%, 79.4%);
+  --text-color: hsl(345,100%,25.1%);
+  --accent-color: hsl(51,47%,60.7%);
+  --DMaccent-color: hsl(from var(--text-color) h s calc(l - 30));
+}
+
+/* For Dark Mode JS Implementation 
+[data-theme="dark"] {
+  --bg-color: hsl(345, 95%, 16%);
+  --text-color:  hsl(51, 34%, 43%);
+  --accent-color: hsl(181, 22%, 56%);
+  --DMaccent-color: hsl(from var(--text-color) h s calc(l - 30));
+}
+  */
+
        /* html {
             scroll-behavior: smooth;
         } */
@@ -11,18 +27,22 @@
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #212121;
+    background: #21212100;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #B5DFE0;
+    background: var(--bg-color);
     border-radius: 10px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(255, 255, 255);
+    background: var(--accent-color);
+  }
+
+  body:has(.switch__input:checked)::-webkit-scrollbar-thumb {
+    background: var(--text-color);
   }
 }
 
@@ -55,7 +75,7 @@
         }
 
         .homeIconSVGPath:hover {
-            fill: #B5DFE0;
+            fill: var(--bg-color);
         }*/
 
         .navWrapper {
@@ -116,7 +136,7 @@
     }
 
     .menu li a:hover {
-        color: #B5DFE0;
+        color: var(--bg-color);
         transition: 0.1s;
         text-decoration: underline;
     }
@@ -173,11 +193,11 @@
     }
 
     .nav span:hover {
-        background-color: #B5DFE0;
+        background-color: var(--bg-color);
     }
 
     .nav input:checked ~ span {
-        background-color: #B5DFE0;
+        background-color: var(--bg-color);
     }
 
     .nav input:checked ~ span:nth-child(4) {
@@ -197,7 +217,7 @@
 
     .nav input:checked ~ span:nth-child(3) {
         transform: translateY(0) rotate(45deg);
-        background-color: #B5DFE0;
+        background-color: var(--bg-color);
         z-index: 4;
     }
 
@@ -209,16 +229,13 @@
         transform: translateY(0) rotate(-45deg);
     }
 
-    input:checked {
+   /*input:checked {
         position: absolute;
         right: -85%;
         width: 200px;
-    }
+    } This was fighting Dark Mode - reassess with Menu implementation*/
 
 /*Close Nav Icon*/
-
-/*Dark & Light Mode*/
-
 
 /*Tablet Breakpoint*/
  @media only screen and (min-width: 760px){
@@ -285,7 +302,7 @@
     }
 
     .textMenu li a:hover {
-        color: #B5DFE0;
+        color: var(--bg-color);
         text-decoration: underline;
         transition: 0.1s;
     }
@@ -301,11 +318,12 @@
         font-weight: 400;
         font-size: 1em;
         line-height: 1.5em;
-        color: #800020;
-        background-color: #B5DFE0;
+        color: var(--text-color);
+        background-color: var(--bg-color);
         margin: 0px 0px 0px 0px;
         min-height: 100vh;
         overflow-x: hidden;
+        width: 100%;
     }
 
     #bodyContent {
@@ -332,12 +350,12 @@
 
     .designLink {
         text-decoration: underline;
-        color: #B5DFE0;
+        color: var(--bg-color);
     }
 
     .bodyLink {
         text-decoration: underline;
-        color:#B5DFE0
+        color: var(--bg-color);
     }
 
     .bodyLink:visited {
@@ -346,12 +364,12 @@
     }
 
     .bodyLink:hover {
-        color: #CEC177;
+        color: var(--accent-color);
         text-decoration: underline;
     }
 
     .bodyLink:active {
-        color: #800020;
+        color: var(--text-color);
         text-decoration: underline;
     }
 
@@ -380,7 +398,6 @@
         font-weight: 400;
         font-size: 1.5em;
         line-height: 1.2em;
-        color: #800020;
         padding: 1em 0em 0em 0em;
         text-align: center;
     }
@@ -443,14 +460,14 @@
         height: 0;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-bottom: 13px solid #B5DFE0;
+        border-bottom: 13px solid var(--bg-color);
         margin: 0px auto;
     }
 
     .arrowShaft {
         height: 12px;
         width: 10px;
-        background-color: #B5DFE0;
+        background-color: var(--bg-color);
         margin: 0px auto;
     }
 
@@ -482,7 +499,6 @@
         font-weight: 400;
         font-size: 2em;
         line-height: 1.2em;
-        color: #800020;
         padding: 1em 0em 0em 0em;
         text-align: center;
     }
@@ -518,7 +534,7 @@
 
         .designLink:hover {
             text-decoration: underline;
-            color: #B5DFE0;
+            color: var(--bg-color);
         }
 
         .gridContainer {
@@ -613,11 +629,10 @@ svg:active .bttSVGrect2{
 }
 /*/ Close Selective Hover State for SVG*/
 
-
 /*Footer Classes*/
 
 #content-wrap {
-    min-height: calc(100% - 144px); // 144px should be the height of the header + height of footer
+    min-height: calc(100% - 144px); //* 144px should be the height of the header + height of footer*/
 }
 
 /* Use only when disparity between header heights across breakpoints.
@@ -649,10 +664,34 @@ svg:active .bttSVGrect2{
     transition: 0.1s;
 }
 
-.admintext:hover {
-    color: #B5DFE0;
-    transition: 0.1s;
-    text-decoration: underline;
+.admintext::before {
+    content: "";
+    cursor: pointer;
+    display: block;
+    opacity: 1;
+    position: absolute;
+    background-image: linear-gradient(to right, var(--accent-color), var(--accent-color));
+    background-position: left;
+    transition: 0.3s ease;
+    z-index: -1;
+    width: 0px;
+    height: 50px;
+    top: 25%;
+    left: 0%;
+    transform: translate(-50%, -25%);
+    border-radius: 50px;
+    margin: 0px auto 0px auto;
+}
+
+.admintext:hover::before {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+body:has(.switch__input:checked) .admintext::before {
+    background-image: linear-gradient(to right, var(--DMaccent-color), var(--DMaccent-color));
 }
 
 .icons {
@@ -668,7 +707,7 @@ svg:active .bttSVGrect2{
 }
 
 .icon:hover {
-    fill: #B5DFE0;
+    fill: var(--bg-color);
     transition: 0.1s;
 }
 
@@ -735,7 +774,7 @@ svg:active .bttSVGrect2{
 }
 
  .accordion {
-    color: #B5DFE0;
+    color: var(--bg-color);
     background-color: #21212100;
     cursor: pointer;
     padding: 0em 0em 1em 0em;
@@ -753,7 +792,7 @@ svg:active .bttSVGrect2{
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active {
     padding: 0em 0em 0em 0em;
-    color: #CEC177;
+    color: var(--accent-color);
     transition: 0.1s;
 }
 
@@ -782,18 +821,18 @@ svg:active .bttSVGrect2{
 }
 
 .activeArrow span svg path {
-    fill: #CEC177;
+    fill: var(--accent-color);
     transition: 0.1s;
 }
 
 @media only screen and (min-width: 1020px) {
     .active, .accordion:hover {
-        color: #CEC177;
+        color: var(--accent-color);
         transition: 0.1s;
     }
 
     .active, .accordion:hover span svg path{
-        fill: #CEC177;
+        fill: var(--accent-color);
         transition: 0.1s;
     }
 }
@@ -826,12 +865,12 @@ svg:active .bttSVGrect2{
 /*Accordian Dropdown close*/
 
 .textMenuCurrentPage {
-    color: #CEC177;
+    color: var(--accent-color);
 }
 
 @media only screen and (min-width: 760px) {
     .textMenuCurrentPage {
-        color: #CEC177;
+        color: var(--accent-color);
         font-weight: 900;
         text-decoration: underline;
     }
@@ -849,7 +888,7 @@ svg:active .bttSVGrect2{
 }
 
 .socialIconSVGPath:hover {
-    fill: #B5DFE0;
+    fill: var(--bg-color);
 }
 
 body {
@@ -859,3 +898,218 @@ body {
 footer p {
     line-height: 0.5em;
 }
+
+/*Dark/Light Mode Switch*/
+
+#DMswitchContainer {
+    top: 0px;
+    left: -25px;
+	border: 0;
+	margin: 0;
+	padding: 0;
+    font-size: calc(40px + (80 - 40) * (100vw - 320px) / (2560 - 320));
+    --hue: 345;
+	--trans-dur: 0.4s;
+	--trans-timing: cubic-bezier(0.65,0,0.35,1);
+    position: absolute;
+    scale: 0.5;
+}
+
+#DMswitchContainer input {
+    position: relative;
+    color: var(--text-color);
+    font: 1em/1.5 sans-serif;
+}
+
+body {
+	background-color: var(--bg-color);
+	transition:
+		background-color var(--trans-dur),
+		color var(--trans-dur);
+}
+.switch,
+.switch__input {
+	position: relative;
+	-webkit-tap-highlight-color: transparent;
+}
+.switch {
+	margin: auto;
+}
+.switch__input,
+.switch__input:before {
+	background-color: var(--text-color);
+}
+.switch__input {
+	border-radius: 0.75em;
+	cursor: pointer;
+	display: block;
+	width: 3em;
+	height: 1.5em;
+	transition: background-color var(--trans-dur) var(--trans-timing);
+	-webkit-appearance: none;
+	appearance: none;
+}
+.switch__input:before {
+	border-radius: 50%;
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0.125em;
+	left: 0.125em;
+	width: 1.25em;
+	height: 1.25em;
+	transition:
+		background-color var(--trans-dur) var(--trans-timing),
+		transform var(--trans-dur) var(--trans-timing);
+}
+.switch__icon,
+.switch__icon-part {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.switch__icon {
+	background-color: var(--bg-color);
+	border-radius: 50%;
+	overflow: hidden;
+	pointer-events: none;
+	top: 0.18em;
+	left: 0.225em; 
+	width: 1.25em;
+	height: 1.25em;
+	transition: transform var(--trans-dur) var(--trans-timing);
+}
+.switch__icon-part {
+	transition:
+		box-shadow var(--trans-dur) var(--trans-timing),
+		transform var(--trans-dur) var(--trans-timing);
+}
+.switch__icon-part--1,
+.switch__icon-part--2,
+.switch__icon-part--3 {
+	border-radius: 50%;
+}
+.switch__icon-part--1 {
+	background-color: var(--bg-color);
+	top: calc(50% - 0.375em);
+	left: calc(50% - 0.375em);
+	width: 0.75em;
+	height: 0.75em;
+}
+.switch__icon-part--2 {
+	background-color: var(--text-color);
+	top: calc(50% - 0.4375em);
+	left: calc(50% - 0.0625em);
+	width: 0.5em;
+	height: 0.5em;
+	transform: translate(-0.1875em,0.1875em) scale(0.2);
+}
+.switch__icon-part--3 {
+	box-shadow: 0 0 0 0.625em var(--accent-color) inset;
+	width: 1.25em;
+	height: 1.25em;
+	transform: scale(0.25);
+}
+.switch__icon-part--3 ~ .switch__icon-part {
+	background-color: var(--accent-color);
+	border-radius: 0.0625em;
+	top: 50%;
+	left: 50%;
+	width: 0.125em;
+	height: 0.1875em;
+	transform-origin: 50% 0;
+}
+.switch__icon-part--4 {
+	transform: translateX(-50%) rotate(0) translateY(0.25em);
+}
+.switch__icon-part--5 {
+	transform: translateX(-50%) rotate(45deg) translateY(0.25em);
+}
+.switch__icon-part--6 {
+	transform: translateX(-50%) rotate(90deg) translateY(0.25em);
+}
+.switch__icon-part--7 {
+	transform: translateX(-50%) rotate(135deg) translateY(0.25em);
+}
+.switch__icon-part--8 {
+	transform: translateX(-50%) rotate(180deg) translateY(0.25em);
+}
+.switch__icon-part--9 {
+	transform: translateX(-50%) rotate(225deg) translateY(0.25em);
+}
+.switch__icon-part--10 {
+	transform: translateX(-50%) rotate(270deg) translateY(0.25em);
+}
+.switch__icon-part--11 {
+	transform: translateX(-50%) rotate(315deg) translateY(0.25em);
+}
+.switch__sr {
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+}
+
+/* `:checked` state */
+.switch__input:checked {
+	background-color: var(--accent-color);
+}
+.switch__input:checked:before,
+.switch__input:checked ~ .switch__icon {
+	transform: translateX(1.5em);
+}
+.switch__input:checked ~ .switch__icon .switch__icon-part--2 {
+	transform: translate(0,0) scale(1);
+}
+.switch__input:checked ~ .switch__icon .switch__icon-part--3 {
+	box-shadow: 0 0 0 0.25em var(--text-color) inset;
+	transform: scale(1);
+}
+.switch__input:checked ~ .switch__icon .switch__icon-part--4 {
+	transform: translateX(-50%) rotate(0) translateY(0.625em) scale(0);
+}
+.switch__input:checked ~ .switch__icon .switch__icon-part--5 {
+	transform: translateX(-50%) rotate(45deg) translateY(0.625em) scale(0);
+}
+.switch__input:checked ~ .switch__icon .switch__icon-part--6 {
+	transform: translateX(-50%) rotate(90deg) translateY(0.625em) scale(0);
+}
+.switch__input:checked ~ .switch__icon .switch__icon-part--7 {
+	transform: translateX(-50%) rotate(135deg) translateY(0.625em) scale(0);
+}
+.switch__input:checked ~ .switch__icon .switch__icon-part--8 {
+	transform: translateX(-50%) rotate(180deg) translateY(0.625em) scale(0);
+}
+.switch__input:checked ~ .switch__icon .switch__icon-part--9 {
+	transform: translateX(-50%) rotate(225deg) translateY(0.625em) scale(0);
+}
+.switch__input:checked ~ .switch__icon .switch__icon-part--10 {
+	transform: translateX(-50%) rotate(270deg) translateY(0.625em) scale(0);
+}
+.switch__input:checked ~ .switch__icon .switch__icon-part--11 {
+	transform: translateX(-50%) rotate(315deg) translateY(0.625em) scale(0);
+}
+body:has(.switch__input:checked) {
+	background-color: var(--text-color);
+	color: var(--accent-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+body:has(.switch__input:checked) svg path {
+    fill: var(--accent-color);
+}
+
+@media only screen and (min-width: 520px) {
+    #DMswitchContainer {
+        left: -46px;
+        scale: 0.3;
+    }
+
+    .switch__icon {
+        top: 0.168em;
+        left: 0.2em;
+    }
+}
+
+/*Dark/Light Mode Switch Close*/

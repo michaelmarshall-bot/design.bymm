@@ -5,7 +5,7 @@
     <meta name="description" content="The portfolio of Mike Marshall, a creative consultant based in Toronto.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Google/Android Favicon Meta-->
-    <meta name="theme-color" content="#B5DFE0">
+    <meta name="theme-color" content="var(--bg-color)">
     <!--Standard Favicon-->
     <link rel="icon" href="favicon/bymmfavicon.png" type="image/svg+xml">
      <!--iOS Favicons-->
@@ -33,8 +33,8 @@
         .CVslab {
             position: relative;
             height: 53px;
-            background: #800020;
-            color: #CEC177;
+            background: var(--text-color);
+            color: var(--accent-color);
             padding: 10px 15px;
             margin-top: 6px;
             margin-bottom: 6px;
@@ -201,9 +201,9 @@
             margin: 2rem 0.9rem;
             border-radius: 50%;
             z-index: 10;
-            outline: 3px solid #800020;
+            outline: 3px solid var(--text-color);
             outline-offset: -6px;
-            box-shadow: 0 0 0 0 #800020, 0 0 0 0 #80002000;
+            box-shadow: 0 0 0 0 var(--text-color), 0 0 0 0 #80002000;
             cursor: pointer;
             -webkit-appearance: none;
                 -moz-appearance: none;
@@ -239,6 +239,12 @@
             -webkit-animation: check 0.4s linear forwards;
                 animation: check 0.4s linear forwards;
         }
+
+        body:has(.switch__input:checked) .slider__nav:checked {
+            -webkit-animation: check2 0.4s linear forwards;
+                animation: check2 0.4s linear forwards;
+        }
+
         .slider__nav:checked:nth-of-type(1) ~ .slider__inner {
             left: 0%;
         }
@@ -305,44 +311,104 @@
             margin: 0rem 0 0rem;
         }
         .slider__txt {
-            color: #800020;
             max-width: 100%;
             font-size: inherit;
         }
 
-        @-webkit-keyframes check {
+       @-webkit-keyframes check {
         50% {
-            outline-color: #CEC177;
-            box-shadow: 0 0 0 12px #CEC177, 0 0 0 36px rgba(214, 202, 92, 0.308);
+            outline-color: var(--bg-color);
+            box-shadow: 0 0 0 12px var(--bg-color), 0 0 0 36px rgba(214, 202, 92, 0.308);
         }
         100% {
-            outline-color: #CEC177;
-            box-shadow: 0 0 0 0 #CEC177, 0 0 0 0 rgba(214, 202, 92, 0);
+            outline-color: var(--bg-color);
+            box-shadow: 0 0 0 0 var(--bg-color), 0 0 0 0 rgba(214, 202, 92, 0);
         }
         }
 
         @keyframes check {
         50% {
-            outline-color: #CEC177;
-            box-shadow: 0 0 0 12px #CEC177, 0 0 0 36px rgba(214, 202, 92, 0.308);
+            outline-color: var(--bg-color);
+            box-shadow: 0 0 0 12px var(--bg-color), 0 0 0 36px rgba(214, 202, 92, 0.308);
         }
         100% {
-            outline-color: #CEC177;
-            box-shadow: 0 0 0 0 #CEC177, 0 0 0 0 rgba(214, 202, 92, 0);
+            outline-color: var(--bg-color);
+            box-shadow: 0 0 0 0 var(--bg-color), 0 0 0 0 rgba(214, 202, 92, 0);
         }
         }
 
-        @media only screen and (min-width: 540px) {
-        .gridBody:has(#testimonialContainer)::before {
+       .gridBody:has(#testimonialContainer)::before {
             content: "";
             cursor: pointer;
             display: block;
             opacity: 1;
             position: absolute;
-            background-image: linear-gradient(to right, #CEC177, #CEC177);
+            background-image: linear-gradient(to right, var(--accent-color), var(--accent-color));
             background-position: center;
             transition: 0.3s ease;
             z-index: -1;
+            width: 1000px;
+            height: 1000px;
+            top: 67%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            margin: 0px auto 0px auto;
+        }
+
+        body:has(.switch__input:checked) .gridBody:has(#testimonialContainer)::before {
+            background-image: linear-gradient(to right, var(--DMaccent-color), var(--DMaccent-color));
+        }
+
+        /*Dark Mode*/
+        @-webkit-keyframes check2 {
+        50% {
+            outline-color: var(--accent-color);
+            box-shadow: 0 0 0 12px var(--accent-color), 0 0 0 36px rgba(181, 223, 224, 0.336);
+        }
+        100% {
+            outline-color: var(--accent-color);
+            box-shadow: 0 0 0 0 var(--accent-color), 0 0 0 0 rgba(181, 223, 224, 0);
+        }
+        }
+
+        @keyframes check2 {
+        50% {
+            outline-color: var(--accent-color);
+            box-shadow: 0 0 0 12px var(--accent-color), 0 0 0 36px rgba(181, 223, 224, 0.336);
+        }
+        100% {
+            outline-color: var(--accent-color);
+            box-shadow: 0 0 0 0 var(--accent-color), 0 0 0 0 rgba(181, 223, 224, 0);
+        }
+        }
+
+        @media only screen and (min-width: 540px) {
+
+        body:has(.switch__input:checked) .slider__nav {
+            outline: 3px solid var(--DMaccent-color);
+            box-shadow: 0 0 0 0 var(--DMaccent-color), 0 0 0 0 #80002000;
+            }
+
+        .slider__nav:checked {
+            -webkit-animation: check3 0.4s linear forwards;
+                animation: check3 0.4s linear forwards;
+        }
+
+        @keyframes check3 {
+        50% {
+            outline-color: var(--accent-color);
+            box-shadow: 0 0 0 12px var(--accent-color), 0 0 0 36px rgba(181, 223, 224, 0.336);
+        }
+        100% {
+            outline-color: var(--accent-color);
+            box-shadow: 0 0 0 0 var(--accent-color), 0 0 0 0 rgba(181, 223, 224, 0);
+        }
+        }
+
+        .gridBody:has(#testimonialContainer)::before {
+            background-image: linear-gradient(to right, var(--accent-color), var(--accent-color));
+            transition: 0.3s ease;
             width: 0px;
             height: 0px;
             top: 67%;
@@ -359,10 +425,14 @@
             border-radius: 50%;
         }
 
+        body:has(.switch__input:checked) .gridBody:has(#testimonialContainer)::before {
+            background-image: linear-gradient(var(--DMaccent-color), var(--DMaccent-color));
+        }
+
         .gridBody:has(#testimonialContainer:hover) .slider__nav {
-            outline: 3px solid rgb(128 0 32);
+            outline: 3px solid var(--text-color);
             outline-offset: -6px;
-            box-shadow: 0 0 0 0 rgb(128 0 32), 0 0 0 0 rgba(128, 0, 32, 0);
+            box-shadow: 0 0 0 0 var(--text-color), 0 0 0 0 rgba(128, 0, 32, 0);
             cursor: pointer;
             -webkit-appearance: none;
                 -moz-appearance: none;
@@ -371,41 +441,22 @@
                     backface-visibility: hidden;
             }
 
-       .gridBody:has(#testimonialContainer:hover) .slider__nav:checked {
+        .gridBody:has(#testimonialContainer:hover) .slider__nav:checked {
+            -webkit-animation: check 0.4s linear forwards;
+                animation: check 0.4s linear forwards;
+             outline: 3px solid var(--bg-color);
+            box-shadow: 0 0 0 0 var(--bg-color), 0 0 0 0 rgba(206, 193, 119, 0);
+        }
+        
+        body:has(.switch__input:checked) .gridBody:has(#testimonialContainer:hover) .slider__nav:checked {
             -webkit-animation: check2 0.4s linear forwards;
                 animation: check2 0.4s linear forwards;
-             outline: 3px solid rgb(206 193 119);
-            box-shadow: 0 0 0 0 rgb(206 193 119), 0 0 0 0 rgba(206, 193, 119, 0);
+             outline: 3px solid var(--bg-color);
+            box-shadow: 0 0 0 0 var(--bg-color), 0 0 0 0 rgba(206, 193, 119, 0);
         }
 
-        .gridBody:has(#testimonialContainer:hover) input:checked {
-            
-        }
-
-        @-webkit-keyframes check2 {
-        50% {
-            outline-color: rgb(181 223 224);
-            box-shadow: 0 0 0 12px rgb(181 223 224), 0 0 0 36px rgba(181, 223, 224, 0.336);
-        }
-        100% {
-            outline-color: rgb(181 223 224);
-            box-shadow: 0 0 0 0 rgb(181 223 224), 0 0 0 0 rgba(181, 223, 224, 0);
-        }
-        }
-
-        @keyframes check2 {
-        50% {
-            outline-color: rgb(181 223 224);
-            box-shadow: 0 0 0 12px rgb(181 223 224), 0 0 0 36px rgba(181, 223, 224, 0.336);
-        }
-        100% {
-            outline-color: rgb(181 223 224);
-            box-shadow: 0 0 0 0rgb(181 223 224), 0 0 0 0 rgba(181, 223, 224, 0);
-        }
-        }
-        }
-
-
+       
+    }
 
         /*Logo Ticker*/
         
@@ -486,7 +537,7 @@
             display: block;
             opacity: 1;
             position: absolute;
-            background-image: linear-gradient(to right, #CEC177, #CEC177);
+            background-image: linear-gradient(to right, var(--accent-color), var(--accent-color));
             background-position: center;
             transition: 0.3s ease;
             z-index: -1;
@@ -498,6 +549,7 @@
             border-radius: 50px;
             margin: 0px auto 0px auto;
         }
+
         #emailLink:hover::before {
             width: 425px;
             height: 50px;
@@ -524,7 +576,7 @@
             display: block;
             opacity: 1;
             position: absolute;
-            background-image: linear-gradient(to right, #CEC177, #CEC177);
+            background-image: linear-gradient(to right, var(--accent-color), var(--accent-color));
             background-position: center;
             transition: 0.3s ease;
             z-index: -1;
@@ -578,16 +630,49 @@
 
         }
 
+        /*Night Mode Settings*/
+        body:has(.switch__input:checked) .CVslab {
+            background-color: var(--accent-color);
+            color: var(--DMaccent-color);
+        }
+
+        body:has(.switch__input:checked) #emailLink::before {
+            background-image: linear-gradient(to right, var(--DMaccent-color), var(--DMaccent-color));
+        }
+        
+        body:has(.switch__input:checked) .contactIcons a::before{
+             background-image: linear-gradient(to right, var(--DMaccent-color), var(--DMaccent-color));   
+        }
+
     </style>
 </head>
 <body id="body">
     <div class="navBar">
         <header>
-        <!--<a href="https://design.bymichaelmarshall.com/">-->
+         <div id="DMswitchContainer">
+            <label class="switch">
+                <input class="switch__input" type="checkbox" checked role="switch"/>
+                    <span class="switch__icon">
+                        <span class="switch__icon-part switch__icon-part--1"></span>
+                        <span class="switch__icon-part switch__icon-part--2"></span>
+                        <span class="switch__icon-part switch__icon-part--3"></span>
+                        <span class="switch__icon-part switch__icon-part--4"></span>
+                        <span class="switch__icon-part switch__icon-part--5"></span>
+                        <span class="switch__icon-part switch__icon-part--6"></span>
+                        <span class="switch__icon-part switch__icon-part--7"></span>
+                        <span class="switch__icon-part switch__icon-part--8"></span>
+                        <span class="switch__icon-part switch__icon-part--9"></span>
+                        <span class="switch__icon-part switch__icon-part--10"></span>
+                        <span class="switch__icon-part switch__icon-part--11"></span>
+                    </span>
+                    <span class="switch__sr">Dark Mode</span>
+            </label>
+        </div>
+        <!--<a href="https://design.bymichaelmarshall.com/">
             <div class="homeIcon">
-                <!--<svg xmlns="http://www.w3.org/2000/svg" width="17.195" height="16.25" viewBox="0 0 17.195 16.25"><path class="homeIconSVGPath" d="M14.207-2338.121H4.245a1.519,1.519,0,0,1-1.519-1.519v-4.762a1.52,1.52,0,0,1-1.652-.331,1.519,1.519,0,0,1,0-2.148l7.044-7.044a1.515,1.515,0,0,1,1.108-.444,1.515,1.515,0,0,1,1.108.444l7.044,7.044a1.519,1.519,0,0,1,0,2.148,1.52,1.52,0,0,1-1.652.331v4.762a1.519,1.519,0,0,1-1.519,1.519Zm-4.98-12.615h0Z" transform="translate(-0.629 2354.371)"/></svg>-->
+                <svg xmlns="http://www.w3.org/2000/svg" width="17.195" height="16.25" viewBox="0 0 17.195 16.25"><path class="homeIconSVGPath" d="M14.207-2338.121H4.245a1.519,1.519,0,0,1-1.519-1.519v-4.762a1.52,1.52,0,0,1-1.652-.331,1.519,1.519,0,0,1,0-2.148l7.044-7.044a1.515,1.515,0,0,1,1.108-.444,1.515,1.515,0,0,1,1.108.444l7.044,7.044a1.519,1.519,0,0,1,0,2.148,1.52,1.52,0,0,1-1.652.331v4.762a1.519,1.519,0,0,1-1.519,1.519Zm-4.98-12.615h0Z" transform="translate(-0.629 2354.371)"/></svg>
             </div>
-        <!--</a>-->
+        </a>-->
         </header>
         <!-- Nav -->
         <!--<nav>
