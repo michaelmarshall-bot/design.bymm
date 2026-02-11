@@ -85,7 +85,7 @@
             height: 50px;
             top: 0%;
             left: 50%;
-            transform: translate(-50%, -75%);
+            transform: translate(-50%, -50%);
             border-radius: 50px;
             margin: 0px auto 0px auto;
         }
@@ -668,6 +668,38 @@ body:has(.switch__input:checked) .btt-btn rect {
     fill: var(--accent-color);   
 }
 
+.gridBody:has(.btt-btn) {
+    position: relative;
+}
+
+.gridBody:has(.btt-btn)::before {
+            content: "";
+            cursor: pointer;
+            display: block;
+            opacity: 1;
+            position: absolute;
+            background-image: linear-gradient(to right, var(--accent-color), var(--accent-color));
+            background-position: center;
+            transition: 0.3s ease;
+            z-index: -1;
+            width: 0px;
+            height: 0px;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+}
+
+.gridBody:has(.btt-btn:hover)::before {
+            width: 200px;
+            height: 200px;
+            transition: 0.3s ease;
+}
+
+body:has(.switch__input:checked) .gridBody:has(.btt-btn)::before{
+    background-image: linear-gradient(to right, var(--DMaccent-color), var(--DMaccent-color));
+}
+
 /*.bttSVGpath {
     fill: rgb(1,1,1);
     filter: brightness(1000);
@@ -743,6 +775,11 @@ svg:active .bttSVGrect2{
     left: 10px;
     margin: 0px 0px 0px 0px;
     transition: 0.1s;
+    color: var(--text-color)"
+}
+
+body:has(.switch__input:checked) .admintext {
+    color: var(--accent-color);
 }
 
 .admintext::before {
