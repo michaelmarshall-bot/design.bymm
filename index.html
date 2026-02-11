@@ -337,6 +337,10 @@
         }
         }
 
+        .gridBody:has(#testimonialContainer) {
+            position: relative;
+        }
+
        .gridBody:has(#testimonialContainer)::before {
             content: "";
             cursor: pointer;
@@ -354,6 +358,7 @@
             transform: translate(-50%, -50%);
             border-radius: 50%;
             margin: 0px auto 0px auto;
+            overflow-x: hidden;
         }
 
         body:has(.switch__input:checked) .gridBody:has(#testimonialContainer)::before {
